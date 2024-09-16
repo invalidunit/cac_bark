@@ -60,7 +60,14 @@
     {
       "enable": 1,
       "name": "QQ 音乐",
-      "url": "https://apps.apple.com/cn/app/id414603431"
+      "url": "https://apps.apple.com/cn/app/id414603431",
+      "bark": {
+        "title": {
+          "cache": "来自 cac - QQ 音乐",
+          "del": "来自 cac - QQ 音乐",
+          "up": "来自 cac - QQ 音乐"
+        }
+      }
     },
     {
       "enable": 1,
