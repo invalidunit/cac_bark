@@ -10,6 +10,7 @@
           "del": "来自 cac - Bark",
           "up": "来自 cac - Bark"
         }
+      }
     },
     {
       "enable": 1,
