@@ -5,5 +5,5 @@
   "name": "Bark - 给你的手机发推送",
   "version": "1.3.8",
   "price": "免费",
-  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/38/f1/63/38f1634d-b2b3-9591-70ab-2e4ba3cc40c6/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-85-220.png/100x100bb.jpg"
+  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2c/b0/1f/2cb01f6a-950a-d0fe-3fe1-75a8c930f30f/AppIcon-0-0-1x_U007epad-0-0-0-0-0-0-85-220.png/100x100bb.jpg"
 }
