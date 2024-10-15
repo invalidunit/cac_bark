@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>简易 cac 配置文件生成</title>
+        <style>
+            .collapsible {
+                background-color: #eee;
+                color: #444;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+            }
+            .content {
+                padding: 0 18px;
+                overflow: hidden;
+                background-color: #f1f1f1;
+            }
+            #apps-list {
+                margin-top: 20px;
+            }
+            .app-item {
+                margin-bottom: 10px;
+            }
+            .app-item input[type="url"] {
+                margin-right: 10px;
+            }
+            #jsonOutput {
+                margin-top: 20px;
+                border: 1px solid #ccc;
+                padding: 10px;
+                min-height: 300px;
+                overflow: auto;
+                background-color: #f4f4f4;
+            }
+            .bark-settings-title {
+                font-size: 20px;
+                margin: 20px 0 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>全局配置</h2>
+        <form id="configForm">
+            <div>
+                <label for="enable">启用</label>
+                <select id="enable" name="enable">
+                    <option value="1" selected>启用</option>
+                    <option value="0">禁用</option>
+                </select>
+            </div>
+            <div class="bark-settings-title">Bark 配置</div>
+            <div class="content">
+                <div>
+                    <label for="barkis_archive">保存到历史消息</label>
+                    <select id="barkis_archive" name="bark.is_archive">
+                        <option value="1">启用</option>
+                        <option value="0" selected>禁用</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="barklevel">通知中断级别</label>
+                    <select id="barklevel" name="bark.level">
+                        <option value="active" selected>active</option>
+                        <option value="timeSensitive">timeSensitive</option>
+                        <option value="passive">passive</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="barksound">通知铃声</label>
+                    <input type="text" id="barksound" name="bark.sound" value="healthnotification">
+                </div>
+                <div>
+                    <label for="barkgroup">通知分组</label>
+                    <input type="text" id="barkgroup" name="bark.group" value="com.nan.crc">
+                </div>
+                <div>
+                    <label for="barkTitlecache">通知标题 - 缓存</label>
+                    <input type="text" id="barkTitlecache" name="bark.title.cache" value="来自 cac - app_name">
+                </div>
+                <div>
+                    <label for="barkTitledel">通知标题 - 删除</label>
+                    <input type="text" id="barkTitledel" name="bark.title.del" value="来自 cac - app_name">
+                </div>
+                <div>
+                    <label for="barkTitleup">通知标题 - 更新</label>
+                    <input type="text" id="barkTitleup" name="bark.title.up" value="来自 cac - app_name">
+                </div>
+                <div>
+                    <label for="barkBodycache">通知内容 - 缓存</label>
+                    <input type="text" id="barkBodycache" name="bark.body.cache" value="当前最新版本：app_version\\n当前购买价格：app_price\\n已缓存到本地等待下一次对比">
+                </div>
+                <div>
+                    <label for="barkBodydel">通知内容 - 删除</label>
+                    <input type="text" id="barkBodydel" name="bark.body.del" value="app_bundle\\n可能已下架，最后出现版本为：\\napp_version\\n从 cac 配置文件中移除 app_id 以避免不必要的消耗">
+                </div>
+                <div>
+                    <label for="barkBodyup">通知内容 - 更新</label>
+                    <input type="text" id="barkBodyup" name="bark.body.up" value="发现变更：\\n版本：app_version\\n价格：app_price">
+                </div>
+                <div>
+                    <label for="barkserver">服务器</label>
+                    <input type="text" id="barkserver" name="bark.server" value="">
+                </div>
+            </div>
+        </form>
+        
+        <h3>应用</h3>
+        <div class="app-item">
+            <input type="url" id="newAppUrl" placeholder="https://example.com/" />
+            <button onclick="addApp()">添加</button>
+        </div>
+        <div id="apps-list"></div>
+
+        <h3>JSON 输出：</h3>
+        <pre id="jsonOutput"></pre>
+
+        <script>
+            // 初始化配置对象
+            let config = {
+                "bark": {
+                    "is_archive": 0,
+                    "Hello_World": 0,
+                    "level": "active",
+                    "group": "com.nan.crc",
+                    "title": {
+                        "cache": "来自 cac - app_name",
+                        "del": "来自 cac - app_name",
+                        "up": "来自 cac - app_name"
+                    },
+                    "body": {
+                        "cache": "当前最新版本：app_version\\n当前购买价格：app_price\\n已缓存到本地等待下一次对比",
+                        "del": "app_bundle\\n可能已下架，最后出现版本为：\\napp_version\\n从 cac 配置文件中移除 app_id 以避免不必要的消耗",
+                        "up": "发现变更：\\n版本：app_version\\n价格：app_price"
+                    },
+                    "sound": "healthnotification"
+                },
+                "enable": 1,
+                "app": []
+            };
+
+            // 页面加载完成后，初始化表单和 App 列表
+            window.onload = function() {
+                document.getElementById('configForm').addEventListener('change', function(e) {
+                    const path = e.target.name.split('.');
+                    let current = config;
+                    path.forEach((key, index) => {
+                        if (index === path.length - 1) {
+                            // Convert to number if the input type is number
+                            current[key] = isNaN(e.target.value) ? e.target.value : Number(e.target.value);
+                        } else {
+                            current = current[key];
+                        }
+                    });
+                    updateJSONOutput();
+                });
+                updateJSONOutput();
+            };
+
+            function updateConfig(inputElement) {
+                const name = inputElement.name;
+                const value = inputElement.tagName === 'SELECT' ? inputElement.value : inputElement.value === 'on' ? 1 : 0;
+                config[name] = value;
+                updateJSONOutput();
+            }
+
+            function addApp() {
+                const newAppUrl = document.getElementById('newAppUrl').value;
+                if (newAppUrl) {
+                    config.app.push({
+                        "enable": 1,
+                        "url": newAppUrl
+                    });
+                    renderAppsList();
+                    updateJSONOutput();
+                    document.getElementById('newAppUrl').value = ''; // 清空输入框
+                }
+            }
+
+            function renderAppsList() {
+                const appsList = document.getElementById('apps-list');
+                appsList.innerHTML = ''; // 清空现有列表
+
+                config.app.forEach((app, index) => {
+                    const appItem = document.createElement('div');
+                    appItem.className = 'app-item';
+                    appItem.innerHTML = `
+                        <input type="url" value="${app.url}" onchange="updateApp(${index}, this.value)" />
+                        <button onclick="removeApp(${index})">移除</button>
+                    `;
+                    appsList.appendChild(appItem);
+                });
+            }
+
+            function updateApp(index, newUrl) {
+                config.app[index].url = newUrl;
+                updateJSONOutput();
+            }
+
+            function removeApp(index) {
+                config.app.splice(index, 1);
+                renderAppsList();
+                updateJSONOutput();
+            }
+
+            function updateJSONOutput() {
+                const jsonOutput = document.getElementById('jsonOutput');
+                jsonOutput.textContent = JSON.stringify(config, null, 2);
+            }
+        </script>
+    </body>
+</html>
