@@ -9,6 +9,8 @@ on:
 jobs:
   cac:
     uses: invalidunit/check_change/.github/workflows/cac_bark.yml@main
+    secrets:
+      _key: ${{ secrets._key }}
 
   remove_all_old_actions:
     uses: invalidunit/action/.github/workflows/remove_all_actions.yml@main
