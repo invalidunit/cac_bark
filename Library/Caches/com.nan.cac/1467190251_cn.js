@@ -5,5 +5,5 @@
   "name": "原神",
   "version": "5.2.0",
   "price": "免费",
-  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/75/6a/3c/756a3ce6-c6ee-3578-84c5-5e1e2ab79877/AppIcon-1x_U007epad-0-0-85-220-0.png/100x100bb.jpg"
+  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/da/59/da/da59dac4-f9df-5af4-0203-f7759e83e6ef/AppIcon-1x_U007epad-0-0-85-220-0.png/100x100bb.jpg"
 }
