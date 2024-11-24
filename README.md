@@ -68,6 +68,10 @@
 
 [简易配置生成器（中文）](https://invalidunit.github.io/cac_bark/create_js_zh.html)
 
+- 5 - 修改 whoami 文件
+
+将自己 github 用户名写入主目录下的 whoami 文件
+
 #### 关于测试
 
 删除缓存文件夹
