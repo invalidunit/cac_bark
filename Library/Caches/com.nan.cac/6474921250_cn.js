@@ -5,5 +5,5 @@
   "name": "CareServer",
   "version": 1.22,
   "price": "免费",
-  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/31/7c/8b/317c8b8f-aca4-2472-7a80-d97b40e40616/AppIcon-0-0-1x_U007emarketing-0-85-220.png/100x100bb.jpg"
+  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/45/47/b8454747-bae1-5c50-ab21-0c97831e2bf1/AppIcon-0-0-1x_U007epad-0-1-sRGB-85-220.png/100x100bb.jpg"
 }
