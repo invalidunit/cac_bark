@@ -5,5 +5,5 @@
   "name": "QQ",
   "version": "9.1.35",
   "price": "免费",
-  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4f/ee/1e/4fee1e7e-8f38-5ad7-30a5-ee4cdc1fbd9a/AppIcon-1-0-1x_U007epad-0-1-0-sRGB-85-220-0.png/100x100bb.jpg"
+  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fe/80/37/fe80378f-dfae-edcc-2d40-643181544075/AppIcon-1-0-1x_U007epad-0-1-0-sRGB-85-220-0.png/100x100bb.jpg"
 }
