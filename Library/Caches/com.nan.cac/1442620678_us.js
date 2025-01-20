@@ -5,5 +5,5 @@
   "name": "Surge 5",
   "version": "5.14.3",
   "price": "Free",
-  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/73/f3/69/73f3695e-2870-bf46-bd8a-5683a477f84c/AppIconS-0-0-1x_U007epad-0-1-0-0-85-220.png/100x100bb.jpg"
+  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/87/f9/11/87f91160-6158-1d0d-933a-bb2b8b22228c/AppIconS-0-0-1x_U007epad-0-1-0-0-85-220.png/100x100bb.jpg"
 }
