@@ -5,5 +5,5 @@
   "name": "Identity V",
   "version": "25.59.2000",
   "price": "Free",
-  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/23/7d/c1/237dc162-63b2-d5b7-ff73-680612253f5e/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/100x100bb.jpg"
+  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fe/06/81/fe068198-a44d-4343-a3bc-de2d23930f3d/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg"
 }
