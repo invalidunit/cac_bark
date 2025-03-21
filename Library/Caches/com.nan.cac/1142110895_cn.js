@@ -5,5 +5,5 @@
   "name": "抖音",
   "version": "33.6.0",
   "price": "免费",
-  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/73/02/4f/73024f92-598e-15f8-5c83-15dbb487122a/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/100x100bb.jpg"
+  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/98/c6/c5/98c6c5b3-026f-c54a-7775-05cc1367ccd2/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/100x100bb.jpg"
 }
