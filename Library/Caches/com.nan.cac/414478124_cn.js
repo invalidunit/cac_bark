@@ -5,5 +5,5 @@
   "name": "微信",
   "version": "8.0.60",
   "price": "免费",
-  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6d/70/df/6d70df29-523e-42e5-9e89-9c7eb47a3f63/AppIcon-0-0-1x_U007epad-0-6-0-sRGB-0-85-220.png/100x100bb.jpg"
+  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/33/62/d0/3362d0ff-7e4c-e38f-d31c-ef4e5e14a232/AppIcon-0-0-1x_U007epad-0-6-0-sRGB-0-85-220.png/100x100bb.jpg"
 }
