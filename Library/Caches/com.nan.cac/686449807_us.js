@@ -5,5 +5,5 @@
   "name": "Telegram Messenger",
   "version": "11.13.2",
   "price": "Free",
-  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0d/f5/52/0df552b1-f659-c35e-f632-0d71d8480f1e/AppIconLLC-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg"
+  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/75/e7/c2/75e7c250-6db3-38e8-0586-8a2a93048b2a/AppIconLLC-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg"
 }
