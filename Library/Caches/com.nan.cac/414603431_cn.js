@@ -5,5 +5,5 @@
   "name": "QQ音乐 - 听我想听",
   "version": "14.9.5",
   "price": "免费",
-  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/10/2d/d3/102dd3c5-c8d0-fe33-cf9d-732d25169b82/AppIcon-0-0-1x_U007ephone-0-0-0-1-0-0-sRGB-85-220.png/100x100bb.jpg"
+  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bc/d2/9b/bcd29b40-20d3-553a-b596-c6f2aa7731d8/AppIcon-0-0-1x_U007ephone-0-0-0-1-0-0-sRGB-85-220.png/100x100bb.jpg"
 }
