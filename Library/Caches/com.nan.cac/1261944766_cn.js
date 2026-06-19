@@ -3,9 +3,9 @@
   "id": 1261944766,
   "bundle": "com.ld.TakeBrowser",
   "name": "Alook浏览器 - 8倍速",
-  "version": 22.1,
-  "version_id": 886892988,
-  "version_release_timestamp": "2026-06-13T18:48:02Z",
+  "version": 22.2,
+  "version_id": 886936661,
+  "version_release_timestamp": "2026-06-19T08:55:26Z",
   "price": "CNY 6.00",
-  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5d/48/46/5d484629-5050-ec50-2586-6398095fda10/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg"
+  "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a2/04/52/a20452a0-83ce-dc1e-dd0f-1207d07237c6/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg"
 }
